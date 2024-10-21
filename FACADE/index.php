@@ -1,4 +1,16 @@
    <?php
+   //The Facade pattern is a structural design pattern. 
+   //It provides a simplified interface to a complex subsystem 
+
+   //It's commonly used to:
+
+//     ⁂⁂⁂⁂⁂⁂⁂⁂⁂⁂⁂⁂⁂⁂⁂⁂⁂⁂⁂⁂⁂⁂⁂⁂
+
+    // 1 - Reduce dependencies between subsystems.
+    // 2 - Simplify interactions with a complex system.
+    // 3 -Provide a clean and easy-to-use interface for multiple classes or components.
+
+
    // Subsystems
     class Amplifier {
         public function on() {
@@ -38,7 +50,7 @@
         }
 
         public function watchMovie() {
-            echo "Get ready to watch a movie...\n";
+            echo "Get ready to watch a movie............................."  . "<br>";
             $this->amplifier->on();
             $this->projector->on();
             $this->lights->dim();
@@ -54,3 +66,5 @@
     $homeTheater = new HomeTheaterFacade($amplifier, $projector, $lights, $screen);
     $homeTheater->watchMovie();
     ?>
+
+    
